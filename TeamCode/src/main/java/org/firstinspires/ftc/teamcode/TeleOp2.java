@@ -167,8 +167,22 @@ public class TeleOp2 extends LinearOpMode {
 
             if (gamepad1.dpad_up) {
 
-                // Get to within 10 of encoder position 1000 on all motors
+                // Get to encoder position 1000 on all motors
 
+                left_front.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                left_front.setTargetPosition(1000);
+
+                left_rear.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                left_rear.setTargetPosition(1000);
+
+                right_front.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                right_front.setTargetPosition(1000);
+
+                right_rear.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                right_rear.setTargetPosition(1000);
+
+
+                /*
                 // Left Front Motor
                 if (lfpos < 995) {
                     left_front.setPower(0.3);
@@ -189,6 +203,26 @@ public class TeleOp2 extends LinearOpMode {
 
                 } else right_front.setPower(0);
 
+                // Left Rear Motor
+                if (lrpos < 995) {
+                    left_rear.setPower(0.3);
+
+                } else if (lrpos > 1005) {
+
+                    left_rear.setPower(-0.3);
+
+                } else left_rear.setPower(0);
+
+                // Right Rear Motor
+                if (rrpos < 995) {
+                    right_rear.setPower(0.3);
+
+                } else if (rrpos > 1005) {
+
+                    right_rear.setPower(-0.3);
+
+                } else right_front.setPower(0);
+                */
 
 
             }
