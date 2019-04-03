@@ -15,8 +15,10 @@ public class TeleOp1 extends LinearOpMode {
 
     private DcMotor leftRear = null;
     private DcMotor leftFront = null;
+    private DcMotor leftMiddle = null;
     private DcMotor rightRear = null;
     private DcMotor rightFront = null;
+    private DcMotor rightMiddle = null;
 
 
     @Override
@@ -25,8 +27,11 @@ public class TeleOp1 extends LinearOpMode {
         // Initialize Hardware
         leftRear = hardwareMap.get(DcMotor.class, "leftRear");
         leftFront = hardwareMap.get(DcMotor.class, "leftFront");
+        leftMiddle = hardwareMap.get(DcMotor.class, "leftMiddle");
         rightRear = hardwareMap.get(DcMotor.class, "rightRear");
         rightFront = hardwareMap.get(DcMotor.class, "rightFront");
+        rightMiddle = hardwareMap.get(DcMotor.class, "rightMiddle");
+
 
         rightRear.setDirection(DcMotorSimple.Direction.REVERSE);
         rightFront.setDirection(DcMotorSimple.Direction.REVERSE);
